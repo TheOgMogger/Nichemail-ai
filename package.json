@@ -1,1 +1,26 @@
-{\n  "name": "nichemail-ai",\n  "version": "1.0.0",\n  "scripts": {\n    "dev": "next dev",\n    "build": "next build",\n    "start": "next start"\n  },\n  "dependencies": {\n    "next": "14.2.32",\n    "react": "^18.2.0",\n    "react-dom": "^18.2.0",\n    "@clerk/nextjs": "^5.0.0",\n    "@supabase/supabase-js": "^2.39.0",\n    "openai": "^4.24.1",\n    "cheerio": "^1.0.0-rc.12",\n    "razorpay": "^2.9.2",\n    "papaparse": "^5.4.1",\n    "tailwindcss": "^3.4.0"\n  },\n  "devDependencies": {\n    "typescript": "^5.0.0",\n    "@types/react": "^18.2.0"\n  }\n}
+{
+  "name": "nichemail-ai",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "next": "14.2.32",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "@clerk/nextjs": "^5.0.0",
+    "@supabase/supabase-js": "^2.39.0",
+    "openai": "^4.24.1",
+    "cheerio": "^1.0.0-rc.12",
+    "razorpay": "^2.9.2",
+    "papaparse": "^5.4.1",
+    "tailwindcss": "^3.4.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0",
+    "@types/react": "^18.2.0",
+    "@types/node": "^20.0.0"
+  }
+}
