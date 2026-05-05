@@ -12,16 +12,23 @@ export default function Home() {
 
   const generateEmail = async () => {
     if (!isSignedIn) return alert('Sign in first')
+    if (!name.trim() || !company.trim()) return alert('Please fill in name and company')
     setLoading(true)
-    const res = await fetch('/api/generate', {
-      method: 'POST',
-      body: JSON.stringify({ name, company }),
-      headers: { 'Content-Type': 'application/json' }
-    })
-    const data = await res.json()
-    setEmail(data.body)
-    setCount(count + 1)
-    setLoading(false)
+    try {
+      const res = await fetch('/api/generate', {
+        method: 'POST',
+        body: JSON.stringify({ name, company }),
+        headers: { 'Content-Type': 'application/json' }
+      })
+      const data = await res.json()
+      if (!res.ok) return alert(data.error || 'Failed to generate email')
+      setEmail(data.body)
+      setCount(c => c + 1)
+    } catch {
+      alert('Something went wrong. Please try again.')
+    } finally {
+      setLoading(false)
+    }
   }
 
   return (
